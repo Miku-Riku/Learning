@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      body {
+        margin : 0;
+        height : 500vh
+      }
+      table, th, td {
+        border : 1px solid black;
+        border-collapse : collapse;
+      }
+      th,td {
+        padding : 7px;
+      }
+      *{
+        padding : 0px;
+      #  margin : 0;
+        box-sizing : border-box;
+        font-size : 20px;
+      }
+      tr:first-child:hover {
+        cursor : pointer;
+        background-color : #990033;
+      }
+      tr:not(:first-child):hover {
+        cursor : pointer;
+        background-color : #33FF99
+      }
+      caption {
+        border : 4px groove black;
+        padding : 2px
+      }
+
+      #Link {
+        font-size : 20px;
+      }
+      hr{
+        background-color : #CCCC33;
+        height: 7px;
+      }
+
+      li{
+        margin-left : 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>The table element</h1>
+    <br>
+    <table>
+      <caption>This is caption of table</caption>
+      <tr>
+        <th>name</th>
+        <th>reg no</th>
+        <th>phone</th>
+        <th>fav</th>
+      </tr>
+      <tr>
+        <td>bhaswanth</td>
+        <td>20204222</td>
+        <td>7993898415</td>
+        <td>cat</td>
+      </tr>
+      <tr>
+        <td>miku</td>
+        <td>20204234</td>
+        <td>9328084770</td>
+        <td>dog</td>
+      </tr>
+    </table>
+    <br>
+    <p>For more work on tables <a href="replicate.html">click here</a></p>
+
+    <br><hr><br>
+    <h1>Links</h1>
+    <p id = "Link">Our first link : <a href="test2.html">Click here for test2.html</a><p>
+
+    <br><br><hr><br>
+    <div class="list">
+      <h1>Lists</h1>
+      <p><span  style = "border : 1px solid black;">these are ordered list with different ordering scheme : </span></p>
+      <div class="container">
+        <ul>
+          <li>cat</li>
+        </ul>
+      </div>
+      <ol>
+        <li>cat</li>
+      </ol>
+      <ol type = 'A'>
+        <li>cat</li>
+      </ol>
+      <ol type = 'I'>
+        <li>cat</li>
+      </ol>
+      <ol type = 'a'>
+        <li>cat</li>
+      </ol>
+      <ol start = 100>
+        <li>cat</li>
+      </ol>
+      <br><hr><br>
+    </div>
+    <h1>HTML FORMS</h1>
+    <h2><u>Different form elements : </u></h2>
+    <form>
+      <label for="name">Name : </label><br>
+      <input type="text" name="name" value="Riku" id = "name" style = "width : 75vw; border-style : groove; border-width : 3px">
+      <br>
+      <input type="submit" name="" value="Submit">
+      <input type="reset" name="" value="Reset"><br>
+      <input type="radio" name="name" value="Riku">Riku <br>
+      <input type="checkbox" name="name" value="riku"> Riku <br>
+      <input type="password" name="password" value="secret"><br>
+      <input type="button" name="button" value="Click mee"><br>
+      <input type="color" name="color" value="red"><br>
+      <input type="date" name="date" value="2022-01-11" max = "2023-01-11" min = "2022-01-01"><br>
+      <input type="email" name="email" value="" placeholder = "email"><br>
+      <input type="number" name="number" value="" placeholder = "Only numbers" min = "0" max = "100"><br>
+      <input type="month" name="" value="2022-11"><br>
+      <input type="text" name="readonly" value="readonly" readonly><br>
+      <input type="text" name="" value="disabled" disabled><br>
+      <input type="number" name="" value="" size = "4" placeholder = "only 4 numbers allowed"><br>
+      <input type="text" name="" value="" placeholder = "required field" required><br>
+      <input type="range" name="" value="75" min = "0" max = "100"><br>
+      <input type="search" name="" value="" placeholder = "search here"><br>
+      <input type="time" name="" value="21:45"><br>
+      <input type="week" name="" value="2022-40"><br>
+      <input type="file" name="" value="" multiple><br>
+      <input type="text" name="" value="" placeholder = "autofocus" autofocus><br>
+      <input list = "random" name = "list">
+      <datalist id ="random">
+        <option value="dog">
+        <option value="pikachu">
+          <option value="rambo">
+            <option value="peacock">
+              <option value="lion">
+
+      </datalist>
+
+    </form>
+    <br><hr><br>
+    <h1>Testing Iframes : </h1>
+    <br>
+    To display the replicate.html website&thinsp;
+    <a href="replicate.html" target = "iframe_a"> <button type="button" name="test">Click Me</button> </a>
+    <br><br>
+    <iframe src="" width="70%" height="500px" style= "margin-left: 200px;" name = "iframe_a" title = "Replicate.html"></iframe>
+    <br><br><hr><br>
+    <h1>Marquee element : </h1>
+    <br>
+    <marquee behaviour = "scroll" direction = "right" width = "100%" bgcolor = "orange" scrollamount = "5" vspace = "50px" hsapce = "50px">This goes from left to right and scrolls</marquee><br>
+    <marquee behaviour = "slide" direction = "right" width = "100%" bgcolor = "tomato" >This goes from left to right and slides</marquee><br>
+    <marquee behaviour = "alternate" direction = "right" width = "100%" bgcolor = "green" >This goes from left to right and scrolls alternatively</marquee>
+
+    <br><hr><br>
+
+    <h1>Changing font line height : </h1>
+    <div style = "text-indent : 100px; letter-spacing : 30px; text-transform : uppercase">This is font</div>
+
+  </body>
+</html>
