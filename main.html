@@ -130,7 +130,7 @@
       <input type="time" name="" value="21:45"><br>
       <input type="week" name="" value="2022-40"><br>
       <input type="file" name="" value="" multiple><br>
-      <input type="text" name="" value="" placeholder = "autofocus" autofocus><br>
+      <!-- <input type="text" name="" value="" placeholder = "autofocus" autofocus><br> -->
       <input list = "random" name = "list">
       <datalist id ="random">
         <option value="dog">
@@ -157,7 +157,66 @@
     <marquee behaviour = "alternate" direction = "right" width = "100%" bgcolor = "green" >This goes from left to right and scrolls alternatively</marquee>
 
     <br><hr><br>
-    
+
+    <p id = "mouse" style = "margin : 20px 30px; border : 1px solid black; font-size : 50px">All Mouse Events</p>
+
+    <p style = "border : 1px solid black; width :70%; height : 250px; overflow-y : auto; margin : auto" id = "log"></p>
+     <p id = "mouse.move" style = "border : 1px solid black; width :70%; height : 40px; margin : auto">MOUSE MOVE AREA</p>
+
+
+
+    <button type="button" name="button" id = "reset" style = "margin : 20px 30px">Reset</button>
+    <button type="button" name="button" id = "toggle" style = "margin : 20px 30px">Toggle</button>
+    <button type="button" name="button" id = "mouse_move">Mouse move</button>
+
+    <script type="text/javascript">
+      var element = document.getElementById("mouse");
+      var log = document.getElementById("log");
+      var that = document.getElementById("toggle");
+      var togglevalue = 0;
+      var mousemove_btn = document.getElementById("mouse_move");
+      var movearea = document.getElementById("mouse.move");
+      var move = 0;
+
+      function mouse_mov(){movearea.innerHTML = Math.random();}
+
+
+      element.addEventListener("mouseover", function(){log.innerHTML += "mouse over<br>";});
+      element.addEventListener("mouseout", function(){log.innerHTML += "mouse out<br>";});
+      element.addEventListener("click", function(){
+        if(togglevalue == 0){log.innerHTML += "Clicked!<br>";}
+      }
+    );
+      element.addEventListener("mouseup", function(){if(togglevalue == 1){log.innerHTML += "mouseup<br>";}});
+      element.addEventListener("mousedown", function(){if(togglevalue == 1){log.innerHTML += "mousedown<br>";}});
+      element.addEventListener("dblclick", function(){log.innerHTML += "double_click<br>";});
+      that.addEventListener("click", function(){
+        if(togglevalue == 0){
+          togglevalue = 1;
+        }
+        else if(togglevalue == 1){
+          togglevalue = 0;
+        }
+
+      }
+    );
+
+    var reset = document.getElementById("reset");
+    reset.addEventListener("click", function(){log.innerHTML = "";});
+    mousemove_btn.addEventListener("click", function(){
+      if(move == 0){
+        move = 1;
+        element.addEventListener("mousemove", mouse_mov);
+      }
+      else if(move == 1){
+        move = 0;
+        element.removeEventListener("mousemove", mouse_mov);
+      }
+    });
+
+    </script>
+
+    <br><hr><br>
 
   </body>
 </html>
